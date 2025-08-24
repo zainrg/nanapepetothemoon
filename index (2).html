@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="https://public-frontend-cos.metadl.com/mgx/img/favicon.png" type="image/png">
+  <title>NanaPepe - The Wholesome Meme Coin Going to the Moon 🚀</title>
+  <meta name="description" content="Meet Grandma Pepe, the sweetest baker in crypto taking us all to the moon. Join early before launch and don't miss the rocket ship!" />
+  <meta name="author" content="NanaPepe Team" />
+
+  <meta property="og:title" content="NanaPepe - The Wholesome Meme Coin Going to the Moon 🚀" />
+  <meta property="og:description" content="Join Grandma Pepe's mission to the moon. Early supporters get the best seats on this rocket ship!" />
+  <meta property="og:type" content="website" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #0f172a 0%, #7c3aed 50%, #0f172a 100%);
+      color: white;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header */
+    .header {
+      border-bottom: 1px solid rgba(124, 58, 237, 0.3);
+      padding: 20px 0;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-text {
+      font-size: 24px;
+      font-weight: bold;
+      background: linear-gradient(45deg, #a855f7, #ec4899);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .holder-count {
+      font-size: 14px;
+      color: #a855f7;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      border: 2px solid #a855f7;
+      background: transparent;
+      color: #a855f7;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn:hover {
+      background: #a855f7;
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: linear-gradient(45deg, #7c3aed, #ec4899);
+      border: none;
+      color: white;
+      font-size: 18px;
+      padding: 15px 30px;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(45deg, #6d28d9, #db2777);
+      transform: translateY(-2px) scale(1.05);
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 80px 0;
+      position: relative;
+    }
+
+    .badge {
+      background: linear-gradient(45deg, #7c3aed, #ec4899);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 30px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-title {
+      font-size: 80px;
+      font-weight: 900;
+      margin-bottom: 30px;
+      background: linear-gradient(45deg, #a855f7, #ec4899, #60a5fa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-description {
+      font-size: 20px;
+      color: #d1d5db;
+      margin-bottom: 40px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 60px;
+    }
+
+    .alert-box {
+      background: linear-gradient(45deg, rgba(124, 58, 237, 0.5), rgba(236, 72, 153, 0.5));
+      border: 1px solid rgba(124, 58, 237, 0.3);
+      border-radius: 12px;
+      padding: 30px;
+      max-width: 600px;
+      margin: 0 auto;
+      backdrop-filter: blur(10px);
+    }
+
+    .alert-title {
+      color: #fde047;
+      font-weight: 600;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .alert-text {
+      color: #d1d5db;
+      line-height: 1.6;
+    }
+
+    /* Cards Grid */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin: 80px 0;
+    }
+
+    .card {
+      background: linear-gradient(135deg, rgba(124, 58, 237, 0.3), rgba(236, 72, 153, 0.3));
+      border: 1px solid rgba(124, 58, 237, 0.3);
+      border-radius: 12px;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(124, 58, 237, 0.3);
+    }
+
+    .card-image {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 30px;
+    }
+
+    .card-title {
+      font-size: 20px;
+      font-weight: bold;
+      color: #a855f7;
+      margin-bottom: 15px;
+    }
+
+    .card-text {
+      color: #d1d5db;
+      line-height: 1.6;
+    }
+
+    /* Features Grid */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin: 80px 0;
+    }
+
+    .feature-card {
+      background: linear-gradient(135deg, rgba(124, 58, 237, 0.2), rgba(236, 72, 153, 0.2));
+      border: 1px solid rgba(124, 58, 237, 0.3);
+      border-radius: 12px;
+      padding: 40px 30px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(124, 58, 237, 0.2);
+    }
+
+    .feature-icon {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    .feature-title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #a855f7;
+      margin-bottom: 15px;
+    }
+
+    .feature-text {
+      color: #d1d5db;
+      line-height: 1.5;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: linear-gradient(45deg, rgba(124, 58, 237, 0.8), rgba(236, 72, 153, 0.8));
+      border: 1px solid rgba(124, 58, 237, 0.5);
+      border-radius: 12px;
+      padding: 60px 40px;
+      text-align: center;
+      margin: 80px 0;
+      backdrop-filter: blur(10px);
+    }
+
+    .cta-title {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    .cta-description {
+      font-size: 20px;
+      margin-bottom: 40px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-white {
+      background: white;
+      color: #7c3aed;
+      border: none;
+    }
+
+    .btn-white:hover {
+      background: #f3f4f6;
+      color: #7c3aed;
+    }
+
+    /* Footer */
+    .footer {
+      background: linear-gradient(45deg, rgba(124, 58, 237, 0.5), rgba(236, 72, 153, 0.5));
+      border-top: 1px solid rgba(124, 58, 237, 0.3);
+      padding: 40px 0;
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .footer-text {
+      color: #d1d5db;
+      margin-bottom: 10px;
+    }
+
+    .footer-copyright {
+      color: #9ca3af;
+      font-size: 14px;
+    }
+
+    /* Floating Animation */
+    .floating-emojis {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .floating-emoji {
+      position: absolute;
+      font-size: 24px;
+      opacity: 0.3;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 50px;
+      }
+      
+      .hero-description {
+        font-size: 18px;
+      }
+      
+      .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .nav {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Floating Emojis -->
+  <div class="floating-emojis">
+    <div class="floating-emoji" style="left: 10%; top: 20%; animation-delay: 0s;">🚀</div>
+    <div class="floating-emoji" style="left: 20%; top: 60%; animation-delay: 1s;">🌙</div>
+    <div class="floating-emoji" style="left: 70%; top: 30%; animation-delay: 2s;">💎</div>
+    <div class="floating-emoji" style="left: 80%; top: 70%; animation-delay: 3s;">⭐</div>
+    <div class="floating-emoji" style="left: 30%; top: 80%; animation-delay: 4s;">🍪</div>
+    <div class="floating-emoji" style="left: 60%; top: 10%; animation-delay: 5s;">🚀</div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <div class="logo">
+          <div style="font-size: 24px;">🍪</div>
+          <span class="logo-text">NanaPepe</span>
+        </div>
+        <div class="nav-right">
+          <div class="holder-count">
+            Holders: <span style="color: white; font-weight: 600;">1,247</span>
+          </div>
+          <a href="https://x.com/nanapepesol" target="_blank" class="btn">
+            🐦 Follow Us
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="badge">
+        ⭐ The Wholesome Meme Coin
+      </div>
+
+      <h1 class="hero-title">NanaPepe</h1>
+
+      <p class="hero-description">
+        Meet Grandma Pepe - the sweetest baker in crypto who's about to take us all to the moon. 
+        Don't miss out on the most wholesome rocket ship in the memecoin space.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#" class="btn btn-primary">
+          🚀 Join the Mission
+        </a>
+        
+        <button class="btn" onclick="copyContract()">
+          📋 Get Contract
+        </button>
+      </div>
+
+      <div class="alert-box">
+        <p class="alert-title">⚠️ Early Bird Alert</p>
+        <p class="alert-text">
+          We're still in pre-launch phase. Those who get in early typically see the biggest gains when we blast off. 
+          <span style="color: #a855f7; font-weight: 600;"> Don't be the one watching from the sidelines.</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- Character Images -->
+    <section class="cards-grid">
+      <div class="card">
+        <div class="card-image">
+          <img src="images/grandma-baking.png" alt="Grandma Pepe baking cookies">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">The Kitchen Chronicles</h3>
+          <p class="card-text">Where Grandma Pepe bakes up the secret recipe for moon missions. Every cookie contains a sprinkle of diamond hands energy.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <img src="images/grandma-knitting.png" alt="Grandma Pepe knitting by the fire">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Cozy Moon Planning</h3>
+          <p class="card-text">Knitting together the strongest community in crypto, one stitch at a time. This is where moon strategies are born.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Value Props -->
+    <section class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🚀</div>
+        <h3 class="feature-title">Moon Mission Ready</h3>
+        <p class="feature-text">Built for the long journey to the moon. Grandma Pepe doesn't mess around when it comes to reaching new heights.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">💎</div>
+        <h3 class="feature-title">Diamond Hands Community</h3>
+        <p class="feature-text">Join holders who understand the value of patience and the power of wholesome meme energy.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">⭐</div>
+        <h3 class="feature-title">Early Opportunity</h3>
+        <p class="feature-text">Pre-launch phase means maximum potential. Those who recognize opportunity early typically win big.</p>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <div class="cta-section">
+      <h2 class="cta-title">Ready for Takeoff? 🚀</h2>
+      <p class="cta-description">
+        Join the NanaPepe family before we launch. Early supporters get the best seats on this rocket ship.
+      </p>
+      <div class="cta-buttons">
+        <a href="https://x.com/nanapepesol" target="_blank" class="btn btn-white">
+          🐦 Follow @nanapepesol
+        </a>
+        <button class="btn" style="border-color: white; color: white;">
+          📈 View Chart (Soon)
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">
+        <div style="font-size: 18px;">🍪</div>
+        <span style="color: #a855f7; font-weight: 600;">NanaPepe</span>
+        <div style="font-size: 18px;">🚀</div>
+      </div>
+      <p class="footer-text">The wholesome memecoin taking us all to the moon</p>
+      <p class="footer-copyright">© 2025 NanaPepe. Built with love by the community.</p>
+    </div>
+  </footer>
+
+  <script>
+    function copyContract() {
+      const contractAddress = "COMING SOON 🚀";
+     
